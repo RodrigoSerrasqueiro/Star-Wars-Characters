@@ -24,18 +24,18 @@ async function loadCharacters(url) {
     const responseJson = await response.json();
 
     responseJson.results.forEach((character) => {
-      const cardContent = `
-        <div class="cards" 
-          style="background-image: 
-          url('https://starwars-visualguide.com/assets/img/characters/${character.url.replace(/\D/g, "")}.jpg');"
-        >
-          <div class="person-name-bg">
-            <span class="person-name">${character.name}</span>
-          </div>
-        </div>
-      `;
+      const card = document.createElement("div");
+      card.style.backgroundImage = `url('https://starwars-visualguide.com/assets/img/characters/${character.url.replace(/\D/g, "")}.jpg')`
+      card.className = "cards"
+      const characterNameBG = document.createElement("div")
+      characterNameBG.className = "character-name-bg"
+      const characterName = document.createElement("span")
+      characterName.className = "character-name"
+      characterName.innerText = `${character.name}`
+      characterNameBG.appendChild(characterName)
+      card.appendChild(characterNameBG)
       const mainContent = document.getElementById('main-content');
-      mainContent.insertAdjacentHTML('beforeend', cardContent);
+      mainContent.appendChild(card);
 
     });
 
