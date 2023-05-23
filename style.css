@@ -172,8 +172,28 @@ footer {
 }
 
 .modal-content {
-  width: 30vw;
-  height: 70vh;
-  background-color: #fff;
+  width: 25vw;
+  height: 80vh;
+  background-color: #0d0d0d;
   border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding: 10px;
+  align-items: center;
+}
+
+.character-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-position: 50% 10%;
+  background-size: cover;
+}
+
+.character-details {
+  font-family: 'Star Wars', sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+  color: gold;
 }
