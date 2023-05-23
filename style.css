@@ -21,8 +21,7 @@ header {
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  column-gap: 40px;
+  justify-content: space-around;
 }
 
 .logo {
@@ -61,13 +60,15 @@ i:hover {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   padding: 20px 0;
 }
 
 h2 {
   font-family: 'Star Wars', sans-serif;
   margin-bottom: 20px;
+  color: gold;
+  font-weight: 300;
 }
 
 .main-content {
@@ -81,8 +82,8 @@ h2 {
 }
 
 .cards {
-  width: 400px;
-  height: 550px;
+  width: 380px;
+  height: 530px;
   background-image: url('https://starwars-visualguide.com/assets/img/characters/1.jpg');
   background-position: 50% 50%;
   background-size: cover;
@@ -101,4 +102,49 @@ h2 {
   font-family: 'Star Wars', sans-serif;
   color: gold;
   font-size: 2rem;
+}
+
+.buttons {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  width: 70px;
+  height: 25px;
+  background-color: gold;
+  color: #000;
+  font-weight: 700;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid #000;
+  outline: none;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #000;
+  color: gold;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  margin: 40px 0 20px 0;
+}
+
+.footer-logo {
+  font-family: 'Star Wars', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.copyrigth {
+  font-weight: 500;
 }
