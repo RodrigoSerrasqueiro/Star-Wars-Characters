@@ -1,0 +1,104 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  color: #fff;
+}
+
+body {
+  background-image: url('./assets/universo-bg.jpg');
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 40px;
+}
+
+.logo {
+  width: 250px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  width: 50%;
+  height: auto;
+}
+
+.logo-text {
+  font-family: 'Star Wars';
+  font-size: 1.4rem;
+}
+
+.social-media {
+  width: 130px;
+  display: flex;
+  justify-content: space-between;
+}
+
+i {
+  font-size: 1.5rem;
+}
+
+i:hover {
+  color: gold;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  padding: 20px 0;
+}
+
+h2 {
+  font-family: 'Star Wars', sans-serif;
+  margin-bottom: 20px;
+}
+
+.main-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 10px;
+  padding: 0 20px;
+}
+
+.cards {
+  width: 400px;
+  height: 550px;
+  background-image: url('https://starwars-visualguide.com/assets/img/characters/1.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  align-items: end;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.cards:hover {
+  transform: scale(1.02);
+}
+
+.person-name {
+  font-family: 'Star Wars', sans-serif;
+  color: gold;
+  font-size: 2rem;
+}
