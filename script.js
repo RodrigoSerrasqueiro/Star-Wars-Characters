@@ -80,6 +80,12 @@ async function loadCharacters(url) {
     const nextButton = document.getElementById('next-button');
     nextButton.disabled = !responseJson.next;
     const backButton = document.getElementById('back-button');
+    if (responseJson.previous) {
+      backButton.style.visibility = "visible"
+    }
+    if (!responseJson.previous) {
+      backButton.style.visibility = "hidden"
+    }
     backButton.disabled = !responseJson.previous;
 
     currentPageUrl = url;
