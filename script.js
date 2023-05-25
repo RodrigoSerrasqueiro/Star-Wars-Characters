@@ -78,15 +78,11 @@ async function loadCharacters(url) {
 
     // Habilita ou desabilita os botões de acordo com a presença de URLs de próxima e página anterior
     const nextButton = document.getElementById('next-button');
-    nextButton.disabled = !responseJson.next;
     const backButton = document.getElementById('back-button');
-    if (responseJson.previous) {
-      backButton.style.visibility = "visible"
-    }
-    if (!responseJson.previous) {
-      backButton.style.visibility = "hidden"
-    }
+    nextButton.disabled = !responseJson.next;
     backButton.disabled = !responseJson.previous;
+
+    backButton.style.visibility = responseJson.previous ? "visible" : "hidden";
 
     currentPageUrl = url;
   } catch (error) {
