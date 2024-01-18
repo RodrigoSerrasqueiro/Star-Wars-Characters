@@ -47,9 +47,7 @@ Digite o seguinte comando para clonar o repositório:
 
 ### Executando o projeto
 
-Na pasta do projeto, digite o seguinte comando para iniciar o servidor de desenvolvimento:
-
-`npm start`
+Caso esteja usando o VS Code, instale a extensão "Live Server". Após a instalação, clique com o botão direito do mouse no arquivo "index.html" e escolha a opção "Open With Live Server".
 
 ## Conclusão:
 
